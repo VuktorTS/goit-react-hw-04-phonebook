@@ -31,7 +31,6 @@ export const App = () => {
     const isInContacts = contacts.some(
       contact => name.toLowerCase() === contact.name.toLowerCase()
     );
-    console.log('isInContacts: ', isInContacts);
 
     if (isInContacts) {
       alert(`${name} is already in contacts`);
@@ -50,14 +49,12 @@ export const App = () => {
 
   const removeContact = contactId => {
     setContacts(prevState => {
-      console.log('prevState: ', prevState);
       return prevState.filter(({ id }) => id !== contactId);
     });
   };
 
   const filterContacts = () => {
     const normalizeFilter = filter.trim().toLowerCase();
-    console.log('contacts: ', contacts);
 
     return contacts.filter(contact =>
       contact.name.toLowerCase().includes(normalizeFilter)
