@@ -1,4 +1,3 @@
-import { Component } from 'react';
 import css from './Filter.module.css';
 import { nanoid } from 'nanoid';
 
